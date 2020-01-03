@@ -1,19 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
 
 import '../scss/style.scss';
 
-const Question = (props) => {
+const Question = props => {
   return(
     <h2 className="question">{props.content}</h2>
   );
 }
 
-const AnswerOptions = (props) => {
-  const rows = props.answerOptions.map((row, index) => {
+const AnswerOptions = props => {
+  return props.answerOptions.map((row, index) => {
     return(
       <AnswerOption
         key={index}
@@ -25,7 +24,6 @@ const AnswerOptions = (props) => {
         />
     );
   });
-  return rows;
 }
 
 const Quiz = (props) => {
